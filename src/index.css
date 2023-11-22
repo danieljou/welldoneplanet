@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-family: 'Roboto';
+}
+
+.own-card {
+    animation-delay: attr(data-delay);
+    animation-duration: 3s;
+    animation-name: apparution;
+}
+
+@keyframes apparution {
+    0% {
+        opacity: 0;
+        /* margin-bottom: 50px; */
+        transform: scale(0);
+    }
+
+    40%,
+    100% {
+        opacity: 1;
+        /* margin-bottom: inherit; */
+        transform: scale(1);
+
+    }
+}
