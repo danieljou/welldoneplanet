@@ -1,20 +1,39 @@
-a {
+/* ul.toggle li>a.active {
+    background-color: rgb(255, 174, 0);
+    margin: 5px;
+    padding: 10px;
+    color: white;
+}
+
+
+*/
+ul.toggle li {
+
+    margin: 5px;
+    padding: 10px;
+}
+
+ul.toggle li a::after {
+    content: '';
+}
+
+ul li a {
     /* padding: 10px; */
     position: relative;
 }
 
-a::after {
+ul li a::after {
     content: '';
     padding: 5px;
     width: 0;
     position: absolute;
-    bottom: -10px;
-    left: 0;
+    bottom: -5px;
+    left: 10px;
     transition: width .5s;
 
 }
 
-a.active::after {
+ul a.active::after {
     width: 50%;
     border-bottom: solid 3px rgb(255, 174, 0);
     /* border-bottom: solid rgb(255, 174, 0); */

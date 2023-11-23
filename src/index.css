@@ -8,9 +8,9 @@
 }
 
 .own-card {
-    animation-delay: attr(data-delay);
-    animation-duration: 3s;
+    animation-duration: attr(animation-duration);
     animation-name: apparution;
+    /* animation-delay: 2s; */
 }
 
 @keyframes apparution {

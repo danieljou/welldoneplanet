@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Redirection vers ton application React</title>
+</head>
+
+<body>
+    <!-- Ici, tu peux ajouter du contenu ou des éléments si nécessaire -->
+
+    <script>
+        // Redirection de toutes les requêtes vers index.html pour React Router
+        const redirectToIndex = () => {
+            const pathName = window.location.pathname;
+            if (pathName !== '/' && pathName !== '/index.html') {
+                window.location.replace('/index.html');
+            }
+        };
+
+        // Appel de la fonction pour la redirection au chargement de la page
+        redirectToIndex();
+    </script>
+</body>
+
+</html>

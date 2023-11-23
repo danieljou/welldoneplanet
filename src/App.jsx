@@ -9,25 +9,26 @@ import About from './pages/About'
 import Services from './pages/Services'
 import Faq from './pages/Faq'
 import Conferences from './pages/Conferences'
+import NotFound from './pages/NotFound'
 
 function App() {
 
 
   return (
-    <>
-      <BrowserRouter basename=''>
+    <div className=''>
+      <BrowserRouter>
         <Routes>
-          <Route path='' Component={Base}>
-            <Route exact path="" element={<Navigate to='' />} />
-            <Route index path='/' Component={HomePage} />
-            <Route path='/about' Component={About} />
-            <Route path='/services' Component={Services} />
-            <Route path='/f-a-q' Component={Faq} />
-            <Route path='/conferences' Component={Conferences} />
+          <Route path='/' Component={Base}>
+            <Route index path='' Component={HomePage} />
+            <Route path='about-us' Component={About} />
+            <Route path='services' Component={Services} />
+            <Route path='f-a-q' Component={Faq} />
+            <Route path='conferences' Component={Conferences} />
+            <Route path='*' Component={NotFound} />
           </Route>
         </Routes>
       </BrowserRouter>
-    </>
+    </div>
   )
 }
 

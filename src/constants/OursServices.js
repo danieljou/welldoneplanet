@@ -5,6 +5,9 @@ import { FiFigma } from "react-icons/fi"
 import { FaClipboardCheck } from "react-icons/fa";
 import { IoSettingsOutline } from "react-icons/io5";
 import { FaHeadset } from "react-icons/fa6";
+import { LuDatabaseBackup } from "react-icons/lu";
+import { HiOutlineComputerDesktop } from "react-icons/hi2";
+import { BsCalendarDay } from "react-icons/bs";
 export default [
     {
         icon: TiWorld,
@@ -36,6 +39,21 @@ export default [
         icon: FiFigma,
         title: "Infographie",
         description: "Une image vaut mille mots, et notre équipe de concepteurs graphiques talentueux est là pour transformer vos idées en designs visuellement captivants. Que vous ayez besoin de créer un logo percutant, des supports visuels attrayants, des illustrations uniques ou des infographies informatives, nous apporterons une touche créative à votre communication visuelle. "
+    },
+    {
+        icon: LuDatabaseBackup,
+        title: "IoT/IA et Big Data",
+        description: "Nous vous aidons à exploiter les avantages de l'Internet des objets (IoT), de l'intelligence artificielle (IA) et du Big Data. Notre expertise dans ces domaines vous permet de collecter, d'analyser et d'exploiter efficacement les données pour prendre des décisions éclairées, optimiser vos processus et créer des produits et services innovants."
+    },
+    {
+        icon: HiOutlineComputerDesktop,
+        title: "Formations informatiques",
+        description: "Nous proposons des programmes de formation informatique personnalisés pour améliorer les compétences de vos employés. Nos formateurs expérimentés offrent des cours pratiques et adaptés à vos besoins spécifiques, vous permettant ainsi de rester à jour avec les dernières technologies et d'optimiser l'utilisation de vos ressources informatiques."
+    },
+    {
+        icon: BsCalendarDay,
+        title: "Service client 24/7",
+        description: "Notre équipe dévouée de support client est disponible 24/7 pour répondre à vos questions, résoudre les problèmes techniques et vous assurer une tranquillité d'esprit. Nous nous engageons à offrir un service client exceptionnel, car votre satisfaction est notre priorité absolue. "
     },
 
 ]

@@ -1,10 +1,19 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import phone from '../assets/lotties/phone'
 import { Controls, Player } from '@lottiefiles/react-lottie-player'
 import OursServices from '../constants/OursServices'
 import SingleServices from '../components/SingleServices'
+import First from '../utils/Skeleton/First'
 
 const Services = () => {
+    const [skel, setSkel] = useState(true)
+    useEffect(() => {
+        setInterval(() => {
+            setSkel(false)
+        }, 2000)
+
+    }, [])
+
     return (
         <div className='w-full p-10' >
             <div className="flex">
@@ -16,13 +25,13 @@ const Services = () => {
             </div>
 
 
-            <div className="bg-gray-100/80  my-12 flex justify-between ">
+            <div className="bg-gray-100/80  my-12 grid sm:grid-cols-1 lg:grid-cols-2 justify-between ">
                 <div className="w-full ">
                     <Player
                         autoplay
                         loop
                         src={phone}
-                        style={{ height: '500px', width: '500px' }}
+                        className='w-full'
                     >
                         <Controls visible={false} />
                     </Player>
@@ -37,15 +46,35 @@ const Services = () => {
                 </div>
 
             </div>
-            <div className="bg-gray-100 w-full grid grid-cols-2 gap-6 p-6">
-                {
-                    OursServices.map((service, key) => (
-                        <div className='flex w-full' key={key} >
-                            <SingleServices delay={(OursServices.indexOf(service) + 1) * 2} services={service} right={OursServices.indexOf(service) % 2 != 0 ? true : false} />
+
+            {
+                skel ?
+                    (
+                        <div className="bg-gray-100 w-full grid lg:grid-cols-3  sm:grid-cols-1 gap-6 p-6 ">
+                            {
+                                OursServices.map((service, key) => (
+                                    <div key={key} >
+                                        <First />
+                                    </div>
+                                ))
+                            }
                         </div>
-                    ))
-                }
-            </div>
+                    )
+                    :
+
+                    (
+                        <div className="bg-gray-100 w-full grid lg:grid-cols-3  sm:grid-cols-1 gap-6 p-6 ">
+                            {
+                                OursServices.map((service, key) => (
+                                    <div className='flex w-full' key={key} >
+                                        <SingleServices delay={(OursServices.indexOf(service) + 1) * 2} services={service} right={OursServices.indexOf(service) % 2 != 0 ? true : false} />
+                                    </div>
+                                ))
+                            }
+                        </div>
+                    )
+            }
+
 
         </div>
     )
