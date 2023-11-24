@@ -5,18 +5,18 @@ export default [
     },
     {
         title: "A Propos",
-        link: 'about-us'
+        link: '/about-us'
     },
     {
         title: "Services",
-        link: 'services'
+        link: '/services'
     },
     {
         title: "F.A.Q",
-        link: 'f-a-q'
+        link: '/f-a-q'
     },
     {
         title: "Conférences",
-        link: 'conferences'
+        link: '/conferences'
     }
 ]

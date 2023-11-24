@@ -3,7 +3,7 @@ import notfound from '../assets/lotties/notfound.json'
 import { Controls, Player } from '@lottiefiles/react-lottie-player'
 const NotFound = () => {
     return (
-        <div className='h-screen w-full flex justify-center items-center ' >
+        <div className='h-screen w-full flex justify-center items-center dark:bg-slate-900' >
             <Player
                 autoplay
                 loop

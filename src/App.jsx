@@ -1,4 +1,4 @@
-import { } from 'react'
+import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -10,21 +10,21 @@ import Services from './pages/Services'
 import Faq from './pages/Faq'
 import Conferences from './pages/Conferences'
 import NotFound from './pages/NotFound'
+import { useSelector } from 'react-redux'
 
 function App() {
-
-
+  const theme = useSelector(state => state.theme)
   return (
-    <div className=''>
+    <div className={`${theme}`}>
       <BrowserRouter>
-        <Routes>
-          <Route path='/' Component={Base}>
-            <Route index path='' Component={HomePage} />
-            <Route path='about-us' Component={About} />
-            <Route path='services' Component={Services} />
-            <Route path='f-a-q' Component={Faq} />
-            <Route path='conferences' Component={Conferences} />
-            <Route path='*' Component={NotFound} />
+        <Routes >
+          <Route path="/" element={<Base />}>
+            <Route index element={<HomePage />} />
+            <Route path="/about-us" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/f-a-q" element={<Faq />} />
+            <Route path="/conferences" element={<Conferences />} />
+            <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
       </BrowserRouter>
