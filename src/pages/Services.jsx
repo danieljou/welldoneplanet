@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import phone from '../assets/lotties/phone'
 import { Controls, Player } from '@lottiefiles/react-lottie-player'
 import OursServices from '../constants/OursServices'

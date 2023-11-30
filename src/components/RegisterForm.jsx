@@ -15,6 +15,7 @@ const RegisterForm = () => {
                 <form onSubmit={handleSubmit} >
                     <FormTemplate label='Votre nom' >
                         <TextField
+                            color='warning'
                             placeholder='Jane'
                             fullWidth
                             type='text'
@@ -23,14 +24,22 @@ const RegisterForm = () => {
                     </FormTemplate>
                     <FormTemplate label='Votre prénom' >
                         <TextField
+                            color='warning'
                             placeholder='Doe'
+                            className='dark:placeholder-slate-100 focus:accent-pink-500'
                             fullWidth
                             type='text'
                             variant='outlined'
+                            sx={{
+                                input: {
+                                    color: 'dark:text-red', // Replace 'original red' with your original red color
+                                },
+                            }}
                         />
                     </FormTemplate>
                     <FormTemplate label='Votre E-mail' >
                         <TextField
+                            color='warning'
                             placeholder='exemple@exemple.com'
                             fullWidth
                             type='email'

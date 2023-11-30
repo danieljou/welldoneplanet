@@ -1,4 +1,3 @@
-import { IoPhonePortraitOutline } from "react-icons/io5";
 import { FaComputer } from "react-icons/fa6";
 import { TiWorld } from "react-icons/ti";
 import { FiFigma } from "react-icons/fi"
